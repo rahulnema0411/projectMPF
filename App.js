@@ -1,12 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import HomeScreen from './features/home/homeScreen';
+import Influence from './features/influence/influenceScreen';
+import Deals from './features/deals/dealsScreen';
+import Chat from './features/chat/chatScreen'
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+
+const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name = "Home" component={HomeScreen}/>
+        <Tab.Screen name = "Influence" component={Influence}/>
+        <Tab.Screen name = "Deals" component={Deals}/>
+        <Tab.Screen name = "Chat" component={Chat}/>
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
