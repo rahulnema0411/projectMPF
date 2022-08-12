@@ -4,13 +4,13 @@ import Category from './category';
 
 export default function StyleCategory() {
   return (
-    <View style={styles.bgStyle}>
-        <Text>Select A Category</Text>
+    <View style={styles.categoriesContainer}>
+        <Text style={styles.headerStyle}>SELECT A CATEGORY</Text>
         <View style={styles.categories}>
-            <Category/>
-            <Category/>
-            <Category/>
-            <Category/>
+            <Category categorieName='GROOMING'/>
+            <Category categorieName='STYLE'/>
+            <Category categorieName='SHOP'/>
+            <Category categorieName='PRIVILAGE'/>
         </View>
     </View>
   );
@@ -27,8 +27,21 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
         flexDirection: 'row' 
     },
-    bgStyle: { 
+    categoriesContainer: { 
         flex: 1, 
-        backgroundColor: '#555',
+        justifyContent: 'center', 
+        alignItems: 'center',
+        paddingVertical: 40,
     },
+    headerStyle: {
+        position: 'absolute',
+        width: 200,
+        height: 20,
+        left: 0,
+        top: 0,
+        fontSize: 11.4303,
+        fontWeight: 'normal',
+        color: '#E9DA96',
+        height: 19,
+    }
 });

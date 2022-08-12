@@ -1,18 +1,16 @@
 import * as React from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
-import Category from './category';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import FeedCard from './feedCard';
 
-export default function StyleClubFeed() {
+export default function StyleClubFeed(props) {
   return (
-    <View style={styles.bgStyle}>
-        <Text>Latest at style club</Text>
-        <View style={styles.categories}>
-            <FeedCard/>
-            <FeedCard/>
-            <FeedCard/>
-            <FeedCard/>
-        </View>
+    <View style={styles.feedContainer}>
+        <Text style={styles.headerStyle}>{props.feedCategorie}</Text>
+        <ScrollView horizontal={true}>
+            {feedData.map((item) => {
+                return <FeedCard/>
+            })}
+        </ScrollView>
     </View>
   );
 }
@@ -28,8 +26,32 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
         flexDirection: 'row' 
     },
-    bgStyle: { 
+    feedContainer: { 
         flex: 1, 
-        backgroundColor: '#555',
+        justifyContent: 'center', 
+        alignItems: 'center',
+        paddingVertical: 40,
     },
+    headerStyle: {
+        position: 'absolute',
+        width: 200,
+        height: 20,
+        left: 0,
+        top: 0,
+        fontSize: 11.4303,
+        fontWeight: 'normal',
+        color: '#E9DA96',
+        height: 19,
+    }
 });
+
+const feedData = [
+    {title: 'Men in black together', key: '11'},
+    {title: 'Men in black together', key: '22'},
+    {title: 'Men in black together', key: '33'},
+    {title: 'Men in black together', key: '44'},
+    {title: 'Men in black together', key: '55'},
+    {title: 'Men in black together', key: '66'},
+    {title: 'Men in black together', key: '77'},
+    {title: 'Men in black together', key: '88'},
+];

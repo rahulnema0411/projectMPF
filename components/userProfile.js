@@ -9,8 +9,8 @@ export default function UserProfile() {
         source={require('../assets/circle.png')}
       />
       <View style={styles.profileSub}>
-        <Text>hey</Text>
-        <Text>premium</Text>
+        <Text style={styles.greetingText}>hello rahul!</Text>
+        <Text style={styles.subscriptionText}>premium</Text>
       </View>
     </View>
   );
@@ -18,20 +18,43 @@ export default function UserProfile() {
 
 const styles = StyleSheet.create({
     tinyLogo: {
-        width: 50,
-        height: 50,
+        width: 36.46,
+        height: 36.46,
+        marginTop: 36,
+        marginRight: 10,
     },
     profile: { 
-        flex: 1, 
+        flex: 1,
         justifyContent: 'center', 
         alignItems: 'center', 
         flexDirection: 'row',
-        backgroundColor: '#444',
+        paddingVertical: 20,
     },
     profileSub: { 
         flex: 1, 
-        justifyContent: 'center', 
-        alignItems: 'center', 
+        alignItems: 'flex-start', 
         flexDirection: 'column' 
+    },
+    greetingText: {
+        position: 'absolute',
+        width: 60,
+        height: 20,
+        left: 0,
+        top: 0,
+        fontSize: 10.9374,
+        fontWeight: 'normal',
+        color: '#FFF',
+        height: 19,
+    },
+    subscriptionText: {
+        position: 'absolute',
+        width: 44,
+        height: 20,
+        left: 0,
+        top: 18.28,
+        fontSize: 10.9374,
+        fontWeight: 'normal',
+        color: '#E9DA96',
+        height: 19,
     },
 });
