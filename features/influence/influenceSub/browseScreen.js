@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Image, SafeAreaView, Dimensions } from 'react-native';
+import { View, StyleSheet, Image, SafeAreaView, Dimensions, Text } from 'react-native';
 import Masonry from 'react-native-infinite-masonry';
 
 const vpWidth = Dimensions.get('window').width;
@@ -20,17 +20,9 @@ export default function BrowseScreen() {
 function Item(dataItem, key){
 
   return ( 
-    <View 
-      key={key}
-      style={{
-          ...styles.card,
-          height: dataItem.height
-      }}
-      >                                       
-      <Image                        
-        style={styles.img} 
-        source={{uri: dataItem.image_url}} 
-        />
+    <View  key={key} style={{...styles.card, height: dataItem.height}}>                                       
+      <Image style={styles.img} source={{uri: dataItem.image_url}}/>
+      <Text style={styles.textStyle}>Texty text</Text>
     </View>
     );
 }
@@ -71,9 +63,9 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   textStyle: {
-    fontSize: 12,
-    color: '#E9DA96',
-    paddingHorizontal: 20,
+    fontSize: 9.6,
+    padding: 6.4,
+    fontFamily: 'DMSans_Bold'
   },
   blogTextStyle: {
     fontSize: 12,
@@ -115,11 +107,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,  
-    backgroundColor: 'white',
-    borderRadius: 5,     
+    backgroundColor: 'white',     
   },
   img: {
-    borderRadius: 5,
     flex: 1,
+    margin: 6.4
   },
 });

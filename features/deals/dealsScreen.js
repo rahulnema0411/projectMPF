@@ -18,11 +18,6 @@ export default function Deals() {
         <View style={styles.blogBoxStyle}>
           <Text style={styles.blogTextStyle}>Easy way to save more</Text>
           <Text style={styles.blogSubTextStyle}>invite friends, earn vouchers</Text>
-          <Button
-            title="Learn More"
-            color="#841584"
-            accessibilityLabel="Learn more about this purple button"
-          />
         </View>
         <View style={styles.boxStyle}>
           <Text style={styles.textStyle}>VIEW PAST VOUCHERS</Text>
@@ -37,12 +32,13 @@ const styles = StyleSheet.create({
       flex: 1, 
       justifyContent: 'center', 
       backgroundColor: '#718598',
-      paddingLeft: 20,
+      paddingLeft: 10,
       paddingTop: 40
   },
   headerStyle: {
     fontSize: 24,
-    color: '#E9DA96'
+    color: '#E9DA96',
+    fontFamily: 'Avenir_Black'
   },
   boxStyle: {
     flexDirection: 'row',
@@ -51,7 +47,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#273A4F',
     width: 327,
     height: 55,
-    borderColor: '#FFFFFF',
+    borderColor: 'rgba(255, 255, 255, 1)',
     borderRadius: 4,
     borderWidth: 1,
     marginBottom: 20
@@ -60,20 +56,23 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#E9DA96',
     paddingHorizontal: 20,
+    fontFamily: 'Avenir',
   },
   blogTextStyle: {
-    fontSize: 12,
-    fontWeight: 'bold',
+    fontSize: 16,
+    fontFamily: 'Avenir_Black',
     color: '#5D2D00',
   },
   blogSubTextStyle: {
     fontSize: 12,
+    fontFamily: 'Avenir',
     color: '#5D5D5D',
   },
   financeTextStyle: {
     fontSize: 16,
     color: '#7DFF5D',
     paddingHorizontal: 20,
+    fontFamily: 'Avenir_Black',
   },
   blogBoxStyle: {
     justifyContent: 'center',
@@ -81,9 +80,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#E9DA96',
     width: 327,
     height: 137,
-    borderColor: '#703C00',
-    borderRadius: 4,
-    borderWidth: 1,
-    marginBottom: 20
+    marginBottom: 20,
+    borderRadius: 7.85276,
+    borderWidth: 2,
+    borderColor: 'rgba(112, 60, 0, 0.4)',
   },
 });
