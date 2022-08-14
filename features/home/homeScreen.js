@@ -25,6 +25,6 @@ const styles = StyleSheet.create({
       flex: 1, 
       justifyContent: 'center', 
       backgroundColor: '#718598',
-      paddingLeft: 20,
+      paddingLeft: 10,
   },
 });

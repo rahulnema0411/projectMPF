@@ -6,7 +6,9 @@ export default function UserProfile() {
     <View style={styles.profile}>
       <Image
         style={styles.tinyLogo}
-        source={require('../assets/circle.png')}
+        source={{
+          uri: `https://picsum.photos/id/${parseInt(Math.random() * 200)}/256/256.jpg`,
+        }}
       />
       <View style={styles.profileSub}>
         <Text style={styles.greetingText}>hello rahul!</Text>
@@ -22,6 +24,7 @@ const styles = StyleSheet.create({
         height: 36.46,
         marginTop: 36,
         marginRight: 10,
+        borderRadius: 100
     },
     profile: { 
         flex: 1,

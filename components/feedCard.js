@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         width: 146,
         height: 146,
         marginLeft: 7,
+        marginBottom: 7
     },
     category: { 
         flex: 1, 

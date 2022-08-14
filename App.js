@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator barStyle={{ backgroundColor: '#344153' }}>
         <Tab.Screen name = "Home" component={HomeScreen}/>
         <Tab.Screen name = "Influence" component={Influence}/>
         <Tab.Screen name = "Deals" component={Deals}/>
