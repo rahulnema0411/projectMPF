@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
       flex: 1, 
       justifyContent: 'center', 
       backgroundColor: '#718598',
-      paddingHorizontal: 20,
-      padding: 40
+      paddingLeft: 20,
+      paddingTop: 40
   },
   headerStyle: {
     fontSize: 24,

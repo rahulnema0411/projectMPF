@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
         left: 0,
         top: 0,
         fontSize: 11.4303,
-        fontWeight: 'normal',
         color: '#E9DA96',
         height: 19,
+        fontFamily: 'Avenir_Black'
     }
 });

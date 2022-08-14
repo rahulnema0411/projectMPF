@@ -25,11 +25,12 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
     categoryTextStyle: {
-      width: 60,
+      width: 70,
       height: 19,
       top: 10.55,
       color: '#FFFFFF',
       fontSize: 10.58,
-      textAlign: 'center'
+      textAlign: 'center',
+      fontFamily: 'DMSans_Medium'
     },
 });

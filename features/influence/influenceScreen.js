@@ -1,10 +1,27 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import BrowseScreen from './influenceSub/browseScreen';
+import WatchScreen from './influenceSub/watchScreen';
+import PeopleScreen from './influenceSub/peopleScreen';
+
+const Tab = createMaterialTopTabNavigator();
+
 
 export default function Influence() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Influence</Text>
-    </View>
+    <Tab.Navigator style={styles.influenceStyle}>
+      <Tab.Screen name="Browse" component={BrowseScreen} />
+      <Tab.Screen name="Watch" component={WatchScreen} />
+      <Tab.Screen name="People" component={PeopleScreen} />
+    </Tab.Navigator>
   );
+
 }
+
+const styles = StyleSheet.create({
+  influenceStyle: { 
+      justifyContent: 'center', 
+      paddingTop: 20
+  }
+});

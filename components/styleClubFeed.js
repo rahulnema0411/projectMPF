@@ -8,7 +8,7 @@ export default function StyleClubFeed(props) {
         <Text style={styles.headerStyle}>{props.feedCategorie}</Text>
         <ScrollView horizontal={true}>
             {feedData.map((item) => {
-                return <FeedCard/>
+                return <FeedCard key={item.key}/>
             })}
         </ScrollView>
     </View>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         flex: 1, 
         justifyContent: 'center', 
         alignItems: 'center',
-        paddingVertical: 40,
+        paddingVertical: 28,
     },
     headerStyle: {
         position: 'absolute',
@@ -39,19 +39,19 @@ const styles = StyleSheet.create({
         left: 0,
         top: 0,
         fontSize: 11.4303,
-        fontWeight: 'normal',
         color: '#E9DA96',
         height: 19,
+        fontFamily: 'Avenir_Black'
     }
 });
 
 const feedData = [
-    {title: 'Men in black together', key: '11'},
-    {title: 'Men in black together', key: '22'},
-    {title: 'Men in black together', key: '33'},
-    {title: 'Men in black together', key: '44'},
-    {title: 'Men in black together', key: '55'},
-    {title: 'Men in black together', key: '66'},
-    {title: 'Men in black together', key: '77'},
-    {title: 'Men in black together', key: '88'},
+    {title: 'Men in black together', key: '1'},
+    {title: 'Men in black together', key: '2'},
+    {title: 'Men in black together', key: '3'},
+    {title: 'Men in black together', key: '4'},
+    {title: 'Men in black together', key: '5'},
+    {title: 'Men in black together', key: '6'},
+    {title: 'Men in black together', key: '7'},
+    {title: 'Men in black together', key: '8'},
 ];

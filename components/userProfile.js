@@ -42,13 +42,13 @@ const styles = StyleSheet.create({
         left: 0,
         top: 0,
         fontSize: 10.9374,
-        fontWeight: 'normal',
+        fontFamily: 'DMSans_Medium',
         color: '#FFF',
         height: 19,
     },
     subscriptionText: {
         position: 'absolute',
-        width: 44,
+        width: 54,
         height: 20,
         left: 0,
         top: 18.28,
@@ -56,5 +56,6 @@ const styles = StyleSheet.create({
         fontWeight: 'normal',
         color: '#E9DA96',
         height: 19,
+        fontFamily: 'DMSans_Regular',
     },
 });
