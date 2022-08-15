@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
       flex: 1, 
       justifyContent: 'center', 
       backgroundColor: '#718598',
-      paddingTop: 40
   },
   headerStyle: {
     fontSize: 24,

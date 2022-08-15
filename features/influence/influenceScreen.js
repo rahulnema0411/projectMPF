@@ -10,7 +10,12 @@ const Tab = createMaterialTopTabNavigator();
 
 export default function Influence() {
   return (
-    <Tab.Navigator style={styles.influenceStyle}>
+    <Tab.Navigator style={styles.influenceStyle} screenOptions={({ route }) => ({
+      tabBarActiveTintColor: 'rgba(255, 255, 255, 1)',
+      tabBarInactiveTintColor: 'rgba(255, 255, 255, 0.4)',
+      tabBarItemStyle: styles.tabBarItemStyle,
+      tabBarLabelStyle: styles.tabBarLabelStyle,
+    })}>
       <Tab.Screen name="Browse" component={BrowseScreen} />
       <Tab.Screen name="Watch" component={WatchScreen} />
       <Tab.Screen name="People" component={PeopleScreen} />
@@ -21,7 +26,17 @@ export default function Influence() {
 
 const styles = StyleSheet.create({
   influenceStyle: { 
-      justifyContent: 'center', 
-      paddingTop: 20
+    justifyContent: 'center', 
+    paddingTop: 30,
+    backgroundColor: '#718598',
+  }, 
+  tabBarItemStyle: {
+    backgroundColor: '#718598',
+  },
+  tabBarLabelStyle: {
+    fontFamily: 'Avenir_Black',
+  },
+  tabBarIndicatorStyle: {
+    color: '#E9DA96'
   }
 });
